@@ -1,0 +1,5 @@
+<p>profile works!</p>
+<p>Hello</p>
+@if (appUser$ | async; as appUser) {
+    <p>{{appUser.username}}</p>
+}
