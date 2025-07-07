@@ -1,0 +1,6 @@
+@if (appUser$ | async; as appUser) {
+    <div class="middle" id="profile">
+        <img class="profile_img" src="./profile.jpg" alt="profile_picture"/>
+        <h2 id="username">{{appUser.username}}</h2>
+    </div>
+}

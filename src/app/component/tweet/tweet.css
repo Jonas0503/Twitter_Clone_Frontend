@@ -1,0 +1,27 @@
+#creator_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+#top_line {
+    display: flex;
+    align-items: center;
+}
+
+#text {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#tweet {
+    border-bottom-style: solid;
+    border-bottom-width: var(--border-width);
+    border-bottom-color: var(--border-color);
+}
+
+#username {
+    font-size: 23px;
+}

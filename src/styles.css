@@ -1,5 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --background-color: #191C5D;
+    --border-color: #161735;
+    --border-width: 2px;
+}
+
 body {
-    background: #191C5D;
+    background: var(--background-color);
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.middle {
+    margin: auto;
+    width: 60%;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-right-style: solid;
+    border-right-width: var(--border-width);
+    border-right-color: var(--border-color);
+    border-left-style: solid;
+    border-left-width: var(--border-width);
+    border-left-color: var(--border-color);
+    padding: 10px;
 }

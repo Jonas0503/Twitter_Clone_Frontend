@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BackendAppUser } from '../backend-app-user';
-import { AppUser } from '../models/app-user';
+import { BackendAppUser } from '../../service/backend-app-user';
+import { AppUser } from '../../models/app-user';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 
