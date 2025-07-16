@@ -10,7 +10,7 @@
     </div>
     @if(createdTweets$ | async; as createdTweets) {
         @for (createdTweet of createdTweets; track $index) {
-            <app-tweet [tweetID]="createdTweet.id"></app-tweet>
+            <app-tweet [fromProfile]="true" [tweetFromProfile]="createdTweet" [tweetCreatorFromProfile]="appUser"></app-tweet>
         }
     }
 }

@@ -15,13 +15,17 @@ export class Tweet implements OnInit {
 
   tweet!: TweetModel;
   creator!: AppUser;
-
-  @Input() tweetID!: string;
+  @Input() fromProfile = false;
+  @Input() tweetFromProfile!: TweetModel;
+  @Input() tweetCreatorFromProfile!: AppUser;
 
   constructor(private backendTweet: BackendTweet, private backendAppUser: BackendAppUser) { }
 
   ngOnInit() {
-    this.getTweetAndItsCreator(this.tweetID);
+    if (this.fromProfile) {
+      this.tweet = this.tweetFromProfile;
+      this.creator = this.tweetCreatorFromProfile;
+    }
   }
 
   getTweetAndItsCreator(id: string) {
