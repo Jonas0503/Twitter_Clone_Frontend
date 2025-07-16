@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-starting-page',
   imports: [],
   templateUrl: './starting-page.html',
-  styleUrl: './starting-page.css'
+  styleUrl: './starting-page.scss'
 })
 export class StartingPage {
 

@@ -3,4 +3,14 @@
         <img class="profile_img" src="./profile.jpg" alt="profile_picture"/>
         <h2 id="username">{{appUser.username}}</h2>
     </div>
+    <div class="middle" id="buttons">
+        <button class="showTweetsButton" matButton="filled" [disabled]="buttonPostsDisabled" (click)="getCreatedTweetsByAppUserID(appUser.id)">Posted</button>
+        <button class="showTweetsButton" matButton="filled" [disabled]="buttonLikedDisabled" (click)="getLikedTweetsByAppUserID(appUser.id)">Liked</button>
+        <button class="showTweetsButton" matButton="filled" [disabled]="buttonDislikedDisabled" (click)="getDislikedTweetsByAppUserID(appUser.id)">Disliked</button>
+    </div>
+    @if(createdTweets$ | async; as createdTweets) {
+        @for (createdTweet of createdTweets; track $index) {
+            <app-tweet [tweetID]="createdTweet.id"></app-tweet>
+        }
+    }
 }

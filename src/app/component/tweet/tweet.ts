@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { concatMap, map} from 'rxjs';
 import { BackendTweet } from '../../service/backend-tweet';
 import { TweetModel } from '../../models/tweet-model';
@@ -9,17 +9,19 @@ import { BackendAppUser } from '../../service/backend-app-user';
   selector: 'app-tweet',
   imports: [],
   templateUrl: './tweet.html',
-  styleUrl: './tweet.css'
+  styleUrl: './tweet.scss'
 })
 export class Tweet implements OnInit {
 
   tweet!: TweetModel;
   creator!: AppUser;
 
+  @Input() tweetID!: string;
+
   constructor(private backendTweet: BackendTweet, private backendAppUser: BackendAppUser) { }
 
   ngOnInit() {
-    this.getTweetAndItsCreator('9f3a4cbd-a0f5-4047-8cee-060304c941e3');
+    this.getTweetAndItsCreator(this.tweetID);
   }
 
   getTweetAndItsCreator(id: string) {
