@@ -4,10 +4,12 @@ import { BackendTweet } from '../../service/backend-tweet';
 import { TweetModel } from '../../models/tweet-model';
 import { AppUser } from '../../models/app-user';
 import { BackendAppUser } from '../../service/backend-app-user';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-tweet',
-  imports: [],
+  imports: [MatButtonModule, MatIconModule],
   templateUrl: './tweet.html',
   styleUrl: './tweet.scss'
 })
