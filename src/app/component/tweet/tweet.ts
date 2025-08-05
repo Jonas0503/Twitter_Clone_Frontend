@@ -42,4 +42,12 @@ export class Tweet implements OnInit {
       this.creator = appUser;
     });
   }
+
+  likeTweet(tweetId: string, userId: string) {
+    this.backendTweet.likeTweet(tweetId, userId).subscribe();
+  }
+
+  dislikeTweet(tweetId: string, userId: string) {
+    this.backendTweet.dislikeTweet(tweetId, userId).subscribe();
+  }
 }

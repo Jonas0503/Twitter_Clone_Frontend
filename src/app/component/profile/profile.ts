@@ -24,8 +24,8 @@ export class Profile implements OnInit {
   constructor(private backendAppUser: BackendAppUser) { }
 
   ngOnInit() {
-    this.getAppUser("e7b18eed-a7e0-45ea-9b4b-42554cde6b36");
-    this.getCreatedTweetsByAppUserID("e7b18eed-a7e0-45ea-9b4b-42554cde6b36");
+    this.getAppUser("e29ed520-3728-4f0a-aa56-08455bf269a5");
+    this.getCreatedTweetsByAppUserID("e29ed520-3728-4f0a-aa56-08455bf269a5");
   }
 
   getAppUser(id: string) {

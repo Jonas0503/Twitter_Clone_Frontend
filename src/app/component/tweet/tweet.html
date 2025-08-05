@@ -7,10 +7,10 @@
         <span>{{tweet.text}}</span>
     </div>
     <div>
-        <button mat-icon-button>
+        <button mat-icon-button (click)="likeTweet(tweet.id, creator.id)">
             <mat-icon>thumb_up</mat-icon>
         </button>
-        <button mat-icon-button>
+        <button mat-icon-button (click)="dislikeTweet(tweet.id, creator.id)">
             <mat-icon>thumb_down</mat-icon>
         </button>
         <button mat-icon-button>
